@@ -15,11 +15,12 @@ class FornecedoresView(ListView):
     def get_queryset(self):
         buscar = self.request.GET.get('buscar')
         qs = super(FornecedoresView, self).get_queryset()
+
         if buscar:
             return qs.filter(nome__icontains=buscar)
 
 
-        if qs.count()>0:
+        if qs.count() > 0:
             paginator = Paginator(qs, 1)
             listagem = paginator.get_page(self.request.GET.get('page'))
             return listagem

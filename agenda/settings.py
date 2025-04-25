@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += ['django_bootstrap5', 'stdimage',]
 
-INSTALLED_APPS += ['home', 'fornecedores',]
+INSTALLED_APPS += ['home', 'fornecedores', 'clientes', 'funcionarios',]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -127,7 +127,10 @@ STATICFILES_DIRS = [BASE_DIR / 'static',]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
